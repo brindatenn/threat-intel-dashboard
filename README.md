@@ -1,15 +1,11 @@
 # OSINT Cyber Threat Intelligence Dashboard
-
 A defensive Cyber Threat Intelligence (CTI) dashboard built with **Python** and **Streamlit**. The app aggregates public OSINT streams, normalises them into a single intelligence feed, calculates a triage priority score, and provides visualisations for quick security decision-making.
 
 ## Why this project exists
-
 Security teams often receive information from multiple public sources: vulnerability catalogues, advisory databases, security news, and internal indicator lists. This project shows how those sources can be compiled into one lightweight analyst dashboard for faster triage.
-
 This project is designed as a portfolio-quality cybersecurity engineering project. It is intentionally defensive and does not include exploit code.
 
 ## Features
-
 - Aggregates public OSINT from:
   - CISA Known Exploited Vulnerabilities catalog
   - NVD CVE API 2.0 keyword search
@@ -28,7 +24,6 @@ This project is designed as a portfolio-quality cybersecurity engineering projec
 - Uses caching to reduce repeated API calls
 
 ## Tech stack
-
 - Python
 - Streamlit
 - Pandas
@@ -37,7 +32,6 @@ This project is designed as a portfolio-quality cybersecurity engineering projec
 - Plotly
 
 ## Project structure
-
 ```text
 threat-intel-dashboard/
 ├── app.py
@@ -56,66 +50,47 @@ threat-intel-dashboard/
 ```
 
 ## Setup
-
 Clone the repository and create a virtual environment:
-
 ```bash
 git clone https://github.com/brindatenn/threat-intel-dashboard.git
 cd threat-intel-dashboard
 python -m venv .venv
 ```
-
 Activate the environment:
-
 ```bash
 # Windows
 .venv\Scripts\activate
-
 # macOS/Linux
 source .venv/bin/activate
 ```
-
 Install dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
-
 Run the dashboard:
-
 ```bash
 streamlit run app.py
 ```
 
 ## Optional API keys
-
 The dashboard works without API keys, but NVD may rate-limit unauthenticated requests. If you have an NVD API key, store it locally as an environment variable:
-
 ```bash
 # Windows PowerShell
 $env:NVD_API_KEY="your_key_here"
-
 # macOS/Linux
 export NVD_API_KEY="your_key_here"
 ```
-
 Do not commit API keys to GitHub.
 
 ## Example use cases
-
 - Quickly identify known exploited vulnerabilities from public advisories
 - Search CVEs by keyword such as `ransomware`, `linux`, `vpn`, `wordpress`, or `authentication`
 - Prioritise vulnerability/advisory records using a transparent scoring model
 - Export filtered intelligence for reporting or further enrichment
 
 ## Limitations
-
 This dashboard is a lightweight portfolio CTI tool, not a replacement for an enterprise SIEM, SOAR, EDR, or commercial threat intelligence platform. The scoring model is intentionally simple and transparent. In a production environment, it should be enriched with asset exposure, exploit maturity, internal telemetry, business criticality, and false-positive review.
 
-## Safe use statement
-
+## Disclaimer
 This project is for defensive security monitoring, vulnerability awareness, and analyst triage. It does not perform exploitation, credential collection, malware execution, or unauthorised scanning.
 
-## Suggested CV wording
-
-> Built a Python/Streamlit OSINT CTI dashboard that aggregates CISA KEV, NVD CVEs, GitHub Security Advisories, RSS feeds, and local IOCs into a unified analyst view, with threat scoring, filtering, visualisation, and CSV export for defensive triage.
