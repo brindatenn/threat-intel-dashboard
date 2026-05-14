@@ -57,11 +57,11 @@ cd threat-intel-dashboard
 python -m venv .venv
 ```
 Activate the environment:
-### Windows
+1. Windows 
 ```bash
 .venv\Scripts\activate
 ```
-### macOS/Linux
+2. macOS/Linux
 ```bash
 source .venv/bin/activate
 ```
@@ -76,8 +76,7 @@ streamlit run app.py
 
 ## Optional API keys
 The dashboard works without API keys, but NVD may rate-limit unauthenticated requests. If you have an NVD API key, store it locally as an environment variable:
-
-### Windows PowerShell
+### Windows
 ```bash
 $env:NVD_API_KEY="your_key_here"
 ```
