@@ -1,0 +1,5 @@
+indicator,type,source,confidence,first_seen,last_seen,tags,description
+185.199.108.153,ip,Example OSINT Feed,medium,2026-05-10,2026-05-13,"scanning,linux",Repeated suspicious SSH scanning attempts
+malicious-login-checker[.]com,domain,Example OSINT Feed,high,2026-05-09,2026-05-12,"phishing,credential-theft",Lookalike domain used in credential harvesting campaign
+http://examplebad[.]com/payload,url,Example OSINT Feed,high,2026-05-08,2026-05-11,"malware,loader",URL observed hosting suspected loader payload
+CVE-2024-3094,cve,Example OSINT Feed,critical,2026-05-07,2026-05-10,"supply-chain,linux",Backdoor-style supply-chain vulnerability used as a high-severity demo CVE
