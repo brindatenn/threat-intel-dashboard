@@ -98,3 +98,6 @@ This dashboard is a lightweight portfolio CTI tool, not a replacement for an ent
 ## Disclaimer
 This project is for defensive security monitoring, vulnerability awareness, and analyst triage. It does not perform exploitation, credential collection, malware execution, or unauthorised scanning.
 
+## Author
+brindatenn
+
